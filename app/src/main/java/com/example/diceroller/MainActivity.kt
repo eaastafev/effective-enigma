@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
+            val diceImage: ImageView = findViewById(R.id.imageView)
+            val diceImage2: ImageView = findViewById(R.id.imageView2)
             rollDice()
         }
         //make a rollDice when the app starts
@@ -44,6 +46,7 @@ class MainActivity : AppCompatActivity() {
         //update imageView and content description
         diceImage.setImageResource(drawableResource)
         diceImage.contentDescription = diceRoll.toString()
+
         Toast.makeText(this, "Dice rolled!", Toast.LENGTH_SHORT).show()
     }
 }
